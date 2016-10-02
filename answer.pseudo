@@ -1,0 +1,18 @@
+//code wrtten down is intended to be run as Javascript ,targetting NodeJs server application
+
+
+function(name){
+
+	//method 1 - using library function -available in javascript
+
+	var num = Math.floor(Math.random()*15)+6;
+
+	//method 2 - using current date-time
+
+	var today = new Date();
+	var num = (today.getSeconds()+1)/4;  //seconds range - 1 to 60 ,if divided by 4 min 0 and max 15
+	num = num<6?num+6:num;  //if less than 6 (i.e 0 to 5 ,add 6)
+
+
+	return name+' '+num;
+}
